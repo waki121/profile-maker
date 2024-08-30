@@ -15,12 +15,10 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: pnpmのインストール
-        run: npm i -g
       - name: 依存ライブラリのインストール
-        run: pnpm i 
+        run: npm i 
       - name: ビルド
-        run: pnpm build
+        run: npm run build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
